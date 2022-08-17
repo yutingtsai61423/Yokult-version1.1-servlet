@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "8af2a9f3-37e3-4afb-9da5-b5088ea68a07",
+		"name": "Yokult_doctor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetPatientNames",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/getDrPatientIdcard?doctorId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"getDrPatientIdcard"
+					],
+					"query": [
+						{
+							"key": "doctorId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientDates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": 2,\r\n    \"patientIdcard\":\"A123456788\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/getDrPatientDates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"getDrPatientDates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCahrt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": 1, \r\n    \"patientIdcard\" : \"A123456788\",\r\n    \"bookingDate\" : \"2022-07-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/returnChart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"returnChart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveChart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": 1,\r\n    \"patientIdcard\": \"A123456788\",\r\n    \"bookingDate\": \"2022-07-20\",\r\n    \"chart\": \"主訴:患者希望牙齒變白 診斷:無。 治療內容:上排牙齒冷光美白療程 建議:第一周會較痠痛，建議搭配抗敏感牙膏使用\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/saveChart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"saveChart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadDoctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": 1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/loadDr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"loadDr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveDoctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": 1,\r\n    \"doctorName\": \"楊廷威\",\r\n    \"doctorPhoto\":\"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/saveDr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"saveDr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nextOne",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"doctorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/nextOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"nextOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSchedule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"listOfDoctorSchedule\": [{\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-7-29\",\"doctorId\":2,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-7-30\",\"doctorId\":1,\"doctorStatus\":1},\r\n   {\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-7-31\",\"doctorId\":2,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-8-1\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-8-2\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-8-3\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"早\",\"doctorScheduleDate\":\"2022-8-4\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-7-29\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-7-30\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-7-31\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-8-1\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-8-2\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-8-3\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"午\",\"doctorScheduleDate\":\"2022-8-4\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"晚\",\"doctorScheduleDate\":\"2022-7-29\",\"doctorId\":1,\"doctorStatus\":0},\r\n   {\"doctorAmpm\":\"晚\",\"doctorScheduleDate\":\"2022-7-30\",\"doctorId\":1,\"doctorStatus\":0}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proj_Yokult/api/0.01/doctor/updateDrSchedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proj_Yokult",
+						"api",
+						"0.01",
+						"doctor",
+						"updateDrSchedule"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
