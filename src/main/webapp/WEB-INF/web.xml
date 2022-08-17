@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Web Application from Archetype for Servlet 3.1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+		<resource-env-ref>
+		<resource-env-ref-name>hibernate/sessionfactory</resource-env-ref-name>
+		<resource-env-ref-type>org.hibernate.Sess000ionFactory</resource-env-ref-type>
+	</resource-env-ref>
+
+	<resource-ref>
+		<res-ref-name>jdbc/yokult</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+
+	<resource-ref>
+		<res-ref-name>mongodb/MyMongoClient</res-ref-name>
+		<res-type>com.mongodb.MongoClient</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+</web-app>

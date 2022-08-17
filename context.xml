@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource auth="Container"
+		driverClassName="com.mysql.cj.jdbc.Driver" maxIdle="10" maxTotal="20"
+		maxWaitMillis="-1" name="jdbc/yokult" password="password"
+		type="javax.sql.DataSource"
+		url="jdbc:mysql://localhost:3306/yokult?serverTimezone=Asia/Taipei"
+		username="root" />
+        
+        <Resource name="mongodb/MyMongoClient" auth="Container"
+		type="com.mongodb.MongoClient" closeMethod="close"
+		factory="com.mongodb.client.MongoClientFactory" singleton="true"
+		connectionString="mongodb+srv://vicky:******@cluster0.sw4btkx.mongodb.net/?retryWrites=true&amp;w=majority" />
+</Context>
