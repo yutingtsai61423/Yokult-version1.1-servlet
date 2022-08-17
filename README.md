@@ -1,4 +1,8 @@
 # Proj_Yokult-version1.1 ⌨
+## 負責項目
+* 病患掛號前台系統 ( 含前後端 ) - Booking
+* 醫師後台系統 ( 含前後端 ) - Doctor
+## 技術介紹
 * 採用技術：
 	* webMVC model
 	* JavaWeb-Servlet 
